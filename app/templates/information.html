@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    <form action="{url 'information' %}" method="GET">
-        <!-- {% csrf_token %} -->
-        <label for="name">This is a input</label>
+    <form action="{% url 'information' %}" method="POST">
+        {% csrf_token %}
+        <label for="name">Your Name: </label>
         <input name="name" type="text">
+        <button type="submit">Get Website!</button>
     </form>
 </body>
 
