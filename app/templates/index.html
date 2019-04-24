@@ -9,13 +9,17 @@
     <title>Read Only | HTML5 UP-Flex</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
+     <link rel="stylesheet" href="./style.css" /> 
+    {% comment %} <style>
+        
+    </style> {% endcomment %}
+
 </head>
 
 <body>
     <div class="left-side">
-        <img class="banner" src="{% static 'images/banner.jpg' %}">
-        <div class="content-holder">
+        <img class="banner" src="{{ banner_picture }}">
+        <div class=" content-holder">
             <section id="first-section">
                 <h2 class="title">Read Only</h2>
                 <p class="text-description">Just an incredibly simple responsive site </p>
@@ -48,7 +52,7 @@
                     curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet
                     commetus.</p>
                 <div class="pic1">
-                    <img class="things-pic" src="{% static 'images/pic1.jpg' %}">
+                    <img class="things-pic" src="{{ pic1 }}">
                     <div class="inner-div">
                         <p class="pic-caption">Possibly broke spacetime</p>
                         <p class="paragraph paragraph-two things-section">Integer eu ante ornare amet commetus
@@ -60,7 +64,7 @@
                 </div>
                 <hr class="line-color2">
                 <div class="pic2">
-                    <img class="things-pic" src="{% static 'images/pic2.jpg' %}">
+                    <img class="things-pic" src="{{ pic2 }}">
                     <div class="inner-div">
                         <p class="pic-caption">Terraformed a small moon</p>
                         <p class="paragraph paragraph-two things-section">Integer eu ante ornare amet commetus
@@ -71,7 +75,7 @@
                 </div>
                 <hr class="line-color2">
                 <div class="pic3">
-                    <img class="things-pic" src="{% static 'images/pic3.jpg' %}">
+                    <img class="things-pic" src="{{ pic3 }}">
                     <div class="inner-div">
                         <p class="pic-caption">Snapped dark matter in the wild</p>
                         <p class="paragraph paragraph-two things-section">Integer eu ante ornare amet commetus
@@ -102,12 +106,12 @@
     </div>
 
     <nav class="right-side">
-        <img class="flex-image" src="{% static 'images/icon-logo.jpg' %}" />
+        <img class="flex-image" src="{{ personal_icon }}" />
         <a class="link-text name" href="#">
             <h4><b>{{name}}</b></h4>
         </a>
-        <p class="description "><i>I got reprogrammed with Flexbox </i></p>
-        <p class="description padding-desc"><i>and now I'm totally cray.</i></p>
+        <p class="description "><i>{{ bio }} </i></p>
+        <!-- <p class="description padding-desc"><i>and now I'm totally cray.</i></p> -->
         <ul class="flex-links">
             <li><a class="link-text " href="#first-section">About</a></li>
             <hr class="line-color">
@@ -119,11 +123,11 @@
         </ul>
         <!-- <div class="contacts-holder"> -->
         <footer class="contacts">
-            <a class="link-text" href="#"><i class="fab fa-twitter"></i></a>
-            <a class="link-text" href="#"><i class="fab fa-facebook-f"></i></a>
-            <a class="link-text" href="#"><i class="fab fa-instagram"></i></a>
-            <a class="link-text" href="#"><i class="fab fa-github"></i></a>
-            <a class="link-text" href="#"><i class="fas fa-envelope"></i></a>
+            <a class="link-text" href="{{ twitter }}"><i class="fab fa-twitter"></i></a>
+            <a class="link-text" href="{{ facebook }}"><i class="fab fa-facebook-f"></i></a>
+            <a class="link-text" href="{{ instagram }}"><i class="fab fa-instagram"></i></a>
+            <a class="link-text" href="{{ github }}"><i class="fab fa-github"></i></a>
+            <a class="link-text" href="mailto:{{email}}"><i class="fas fa-envelope"></i></a>
         </footer>
         <!-- </div> -->
     </nav>
