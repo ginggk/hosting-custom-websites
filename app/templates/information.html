@@ -19,66 +19,77 @@
     <div class="description-holder">
         <h1 class="description"> Your Personal Website Generator </h1>
     </div>
-    <div class="form-container">
-        <form class="form" action="{% url 'information' %}" method="POST">
-            {% csrf_token %}
-            <div class="section">
-                <label for="name">Your Name: </label>
-                <input class="name-input" name="name" type="text">
+    <section class="whole-section">
+        <section class="first-section">
+            <div class="form-container">
+                <form class="form" action="{% url 'information' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="section">
+                        <label for="name">Your Name: </label>
+                        <input class="name-input" name="name" type="text">
+                    </div>
+                    <div class="section">
+                        <label for="personal_icon"> The Url for your Personal Icon: </label>
+                        <input class="icon-input" name="personal_icon" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="color">Color of your Choice: </label>
+                        <input class="color-input" name="color" type="color">
+                    </div>
+                    <div class="section">
+                        <label for="banner_picture">Banner Picture: </label>
+                        <input class="banner-input" name="banner_picture" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="pic1">Your First Accomplishments Picture: </label>
+                        <input class="pic1-input" name="pic1" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="pic2">Your Second Accomplishments Picture: </label>
+                        <input class="pic2-input" name="pic2" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="pic3">Your Third Accomplishments Picture: </label>
+                        <input class="pic3-input" name="pic3" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="bio">A little bio for the navbar: </label>
+                        <textarea class="bio-input" name="bio" type="text" placeholder="Some things about you!"></textarea>
+                    </div>
+                    <div class="section">
+                        <label for="twitter">Your Twitter Link: </label>
+                        <input class="twitter-input" name="twitter" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="facebook"> Your Facebook Link: </label>
+                        <input class="facebook-input" name="facebook" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="instagram">Your Instagram Link: </label>
+                        <input class="instagram-input" name="instagram" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="github">Your Github Link: </label>
+                        <input class="github-input" name="github" type="url">
+                    </div>
+                    <div class="section">
+                        <label for="email">What is your email? </label>
+                        <input class="email-input" name="email" type="email">
+                    </div>
+                    <div class="section button-section">
+                        <button class="button" type="submit">Get Website!</button>
+                    </div>
+                </form>
             </div>
-            <div class="section">
-                <label for="personal_icon"> The Url for your Personal Icon: </label>
-                <input class="icon-input" name="personal_icon" type="url">
-            </div>
-            <div class="section">
-                <label for="color">Color of your Choice: </label>
-                <input class="color-input" name="color" type="color">
-            </div>
-            <div class="section">
-                <label for="banner_picture">Banner Picture: </label>
-                <input class="banner-input" name="banner_picture" type="url">
-            </div>
-            <div class="section">
-                <label for="pic1">Your First Accomplishments Picture: </label>
-                <input class="pic1-input" name="pic1" type="url">
-            </div>
-            <div class="section">
-                <label for="pic2">Your Second Accomplishments Picture: </label>
-                <input class="pic2-input" name="pic2" type="url">
-            </div>
-            <div class="section">
-                <label for="pic3">Your Third Accomplishments Picture: </label>
-                <input class="pic3-input" name="pic3" type="url">
-            </div>
-            <div class="section">
-                <label for="bio">A little bio for the navbar: </label>
-                <textarea class="bio-input" name="bio" type="text" placeholder="Some things about you!"></textarea>
-            </div>
-            <div class="section">
-                <label for="twitter">Your Twitter Link: </label>
-                <input class="twitter-input" name="twitter" type="url">
-            </div>
-            <div class="section">
-                <label for="facebook"> Your Facebook Link: </label>
-                <input class="facebook-input" name="facebook" type="url">
-            </div>
-            <div class="section">
-                <label for="instagram">Your Instagram Link: </label>
-                <input class="instagram-input" name="instagram" type="url">
-            </div>
-            <div class="section">
-                <label for="github">Your Github Link: </label>
-                <input class="github-input" name="github" type="url">
-            </div>
-            <div class="section">
-                <label for="email">What is your email? </label>
-                <input class="email-input" name="email" type="email">
-            </div>
-            <div class="section button-section">
-                <button class="button" type="submit">Get Website!</button>
-            </div>
-        </form>
-    </div>
+        </section>
+        <section class="second-section">
+            <img class="first-preview" src="{% static 'images/template-example.png' %}">
+            <img class="second-preview" src="{% static 'images/template-ex2.png' %}">
+            <img class="third-preview" src="{% static 'images/template-ex3.png' %}">
+            <img class="fourth-preview" src="{% static 'images/template-example4.png' %}">
+            <img class="fifth-preview" src="{% static 'images/template-example-5.png' %}">
+        </section>
+    </section>
 </body>
 
 </html>
