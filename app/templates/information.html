@@ -22,7 +22,7 @@
     <section class="whole-section">
         <section class="first-section">
             <div class="form-container">
-                <form class="form" action="{% url 'information' %}" method="POST">
+                <form class="form" action="{% url 'information' %}"  target="_blank" method="POST">
                     {% csrf_token %}
                     <div class="section">
                         <label for="name">Your Name: </label>
@@ -79,8 +79,12 @@
                     <div class="section button-section">
                         <button class="button" type="submit">Get Website!</button>
                     </div>
+                    <div class="preview-button">
+                        <button formaction="{% url 'preview' %}" class="button" type="submit">Preview Website </button>
+                    </div>
+                </div>
                 </form>
-            </div>
+                
         </section>
         <section class="second-section">
             <img class="first-preview" src="{% static 'images/template-example.png' %}">

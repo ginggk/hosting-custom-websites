@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Read Only | HTML5 UP-Flex</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        {{ css }}
+    </style> 
+
+</head>
+
+<body>
+    <div class="left-side">
+        <img class="banner" src="{{ banner_picture }}">
+        <div class=" content-holder">
+            <section id="first-section">
+                <h2 class="title">Read Only</h2>
+                <p class="text-description">Just an incredibly simple responsive site </p>
+                <p class="text-description other-description">template recreated by <a href="#"
+                        class="text-link">{{name}}.</a>
+                </p>
+                <p class="paragraph">Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in
+                    arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac
+                    commodo.
+                    Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum
+                    blandit
+                    integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
+            </section>
+            <section id="second-section">
+                <p class="text-description">Things I Can Do</p>
+                <p class="paragraph paragraph-two">Integer eu ante ornare amet commetus vestibulum blandit integer in
+                    curae acfaucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
+                <ul class="featured-icons">
+                    <li class="icon"><i class="fas fa-code icon-pic"></i> Write all the Code</li>
+                    <li class="icon"><i class="fas fa-book icon-pic"></i> Read books and stuff</li>
+                    <li class="icon"><i class="fas fa-bolt icon-pic"></i> Lightning Bolt</li>
+                    <li class="icon"><i class="fas fa-boxes icon-pic"></i> Stack some Boxes</li>
+                    <li class="icon"><i class="fas fa-coffee icon-pic"></i> Drink much coffee</li>
+                    <li class="icon"><i class="fas fa-users icon-pic"></i> Shadow clone technique</li>
+                </ul>
+            </section>
+            <section id="third-section">
+                <p class="text-description">A Few Accomplishments</p>
+                <p class="paragraph paragraph-two">Integer eu ante ornare amet commetus vestibulum blandit integer in
+                    curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet
+                    commetus.</p>
+                <div class="pic1">
+                    <img class="things-pic" src="{{ pic1 }}">
+                    <div class="inner-div">
+                        <p class="pic-caption">Possibly broke spacetime</p>
+                        <p class="paragraph paragraph-two things-section">Integer eu ante ornare amet commetus
+                            vestibulum
+                            blandit integer
+                            in curae ac faucibus integer
+                            adipiscing ornare amet.</p>
+                    </div>
+                </div>
+                <hr class="line-color2">
+                <div class="pic2">
+                    <img class="things-pic" src="{{ pic2 }}">
+                    <div class="inner-div">
+                        <p class="pic-caption">Terraformed a small moon</p>
+                        <p class="paragraph paragraph-two things-section">Integer eu ante ornare amet commetus
+                            vestibulum
+                            blandit integer
+                            in curae ac faucibus integer adipiscing ornare amet.</p>
+                    </div>
+                </div>
+                <hr class="line-color2">
+                <div class="pic3">
+                    <img class="things-pic" src="{{ pic3 }}">
+                    <div class="inner-div">
+                        <p class="pic-caption">Snapped dark matter in the wild</p>
+                        <p class="paragraph paragraph-two things-section">Integer eu ante ornare amet commetus
+                            vestibulum
+                            blandit integer
+                            in curae ac faucibus integer adipiscing ornare amet.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="fourth-section">
+                <p class="text-description">Contact Me</p>
+                <p class="less-padding">Integer eu ante ornare amet commetus vestibulum blandit integer in
+                    curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet
+                    commetus.</p>
+                <form id="contact-form">
+                    <input class=" name-input " for="name" type="text" placeholder="Name">
+                    <input class=" email-input " for="email" type="text" placeholder="Email">
+                    <input class=" subject-input" for="subject" type="text" placeholder="Subject">
+                    <textarea class=" message-input" for="message" type="text" placeholder="Message"></textarea>
+                </form>
+                <div class="button-holder">
+                    <button class="send-message" type="submit">Send Message</button>
+                    <button class="reset-form" type="button">Reset Form</button>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <nav class="right-side">
+        <img class="flex-image" src="{{ personal_icon }}" />
+        <a class="link-text name" href="#">
+            <h4><b>{{name}}</b></h4>
+        </a>
+        <p class="description "><i>{{ bio }} </i></p>
+        <!-- <p class="description padding-desc"><i>and now I'm totally cray.</i></p> -->
+        <ul class="flex-links">
+            <li><a class="link-text " href="#first-section">About</a></li>
+            <hr class="line-color">
+            <li><a class="link-text " href="#second-section">Things I can Do</a></li>
+            <hr class="line-color">
+            <li><a class="link-text " href="#third-section">A Few Accomplishments</a></li>
+            <hr class="line-color">
+            <li><a class="link-text " href="#fourth-section">Contact</a></li>
+        </ul>
+        <!-- <div class="contacts-holder"> -->
+        <footer class="contacts">
+            <a class="link-text" href="{{ twitter }}"><i class="fab fa-twitter"></i></a>
+            <a class="link-text" href="{{ facebook }}"><i class="fab fa-facebook-f"></i></a>
+            <a class="link-text" href="{{ instagram }}"><i class="fab fa-instagram"></i></a>
+            <a class="link-text" href="{{ github }}"><i class="fab fa-github"></i></a>
+            <a class="link-text" href="mailto:{{email}}"><i class="fas fa-envelope"></i></a>
+        </footer>
+        <!-- </div> -->
+    </nav>
+
+
+
+
+</body>
+
+</html>
