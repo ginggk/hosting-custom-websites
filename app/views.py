@@ -76,3 +76,51 @@ class WebsiteInfo(View):
             print(form.errors)
             return render(request, 'information.html',
                           {'InformationForm': form})
+
+
+class PreviewButton(View):
+    def get(self, request):
+        return render(request, 'preview.html',
+                      {'InformationForm': forms.InformationForm()})
+
+    def post(self, request):
+        form = forms.InformationForm(request.POST)
+
+        if form.is_valid():
+            css_template = get_template('style.css')
+            css_context = {'color': form.cleaned_data['color']}
+            rendered_css = css_template.render(css_context)
+            name = form.cleaned_data['name']
+            personal_icon = form.cleaned_data['personal_icon']
+            color = form.cleaned_data['color']
+            banner_picture = form.cleaned_data['banner_picture']
+            pic1 = form.cleaned_data['pic1']
+            pic2 = form.cleaned_data['pic2']
+            pic3 = form.cleaned_data['pic3']
+            bio = form.cleaned_data['bio']
+            twitter = form.cleaned_data['twitter']
+            facebook = form.cleaned_data['facebook']
+            instagram = form.cleaned_data['instagram']
+            github = form.cleaned_data['github']
+            email = form.cleaned_data['email']
+            return render(
+                request, 'preview.html', {
+                    'name': name,
+                    'personal_icon': personal_icon,
+                    'color': color,
+                    'banner_picture': banner_picture,
+                    'pic1': pic1,
+                    'pic2': pic2,
+                    'pic3': pic3,
+                    'bio': bio,
+                    'twitter': twitter,
+                    'facebook': facebook,
+                    'instagram': instagram,
+                    'github': github,
+                    'email': email,
+                    'css': rendered_css,
+                })
+        else:
+            print(form.is_valid())
+            print(form.cleaned_data)
+            print(form.errors)
