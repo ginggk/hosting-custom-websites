@@ -93,6 +93,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 3rem;
+    padding-bottom: 1rem;
 }
 
 img {
@@ -107,4 +108,17 @@ img {
     flex-direction: column;
     padding-top: 2rem;
     padding-right: 3rem;
+}
+
+
+.preview-button button {
+    max-width: 50rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background-color: brown;
+    color: white;
+
 }
