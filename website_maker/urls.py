@@ -17,4 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from app import views
 
-urlpatterns = [path('', views.WebsiteInfo.as_view(), name='information')]
+urlpatterns = [
+    path('', views.WebsiteInfo.as_view(), name='information'),
+    path('preview', views.PreviewButton.as_view(), name='preview')
+]
