@@ -122,3 +122,13 @@ img {
     color: white;
 
 }
+
+/* .paragraph {
+    font-family: 'VT323', monospace;
+} */
+
+.reference-link {
+    text-decoration: underline red;
+    color: black;
+
+}
